@@ -32,6 +32,12 @@ class MultiSpawning(Node):
 
 
   def service_callback(self, request, response):
+
+    self.req_teleport.x = self.center_x  # 5.54
+    self.req_teleport.y = self.center_y  # 5.54
+    self.req_teleport.theta = 0.0
+    self.teleport.call_async(self.req_teleport)
+
     x, y, theta = self.calc_position(request.num, 3)
 
     for n in range(len(theta)):
@@ -39,15 +45,12 @@ class MultiSpawning(Node):
       self.req_spawn.y = float(self.center_y + y[n])
       self.req_spawn.theta = float(theta[n])
       self.spawn.call_async(self.req_spawn)
-    
+
     response.x = x
     response.y = y
     response.theta = theta
 
-    
     time.sleep(0.1)
-    
-
     return response
 
 
