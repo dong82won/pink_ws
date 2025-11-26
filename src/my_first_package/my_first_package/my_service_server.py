@@ -25,7 +25,7 @@ class MultiSpawning(Node):
 
   def calc_position(self, n, r):
     gap_theta = 2 * np.pi / n
-    theta = [gap_theta * n for n in range(n)]
+    theta = [gap_theta * i for i in range(n)]
     x = [r * np.cos(t) for t in theta]
     y = [r * np.sin(t) for t in theta]
     return x, y, theta
@@ -56,8 +56,8 @@ class MultiSpawning(Node):
 
 def main(args=None):
   rp.init(args=args)
-  multi_spwan = MultiSpawning()
-  rp.spin(multi_spwan)
+  multi_spawn = MultiSpawning()
+  rp.spin(multi_spawn)
   rp.shutdown()
 
 if __name__ == '__main__':
