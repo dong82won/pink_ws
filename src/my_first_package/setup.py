@@ -29,6 +29,7 @@ setup(
             'my_publisher_node = my_first_package.my_publisher:main',
             'turtle_cmd_and_pose_node = my_first_package.turtle_cmd_and_pose:main',
             'my_service_server_node = my_first_package.my_service_server:main',
+            'dist_turtle_action_server_node = my_first_package.dist_turtle_action_server:main',
         ],
     },
 )

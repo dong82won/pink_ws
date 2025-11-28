@@ -174,3 +174,78 @@ self.req_teleport.y = 1.0
 
 
 # 2-12 다수의 서비스 클라이언트 구현하기 (OK)
+
+
+지금 코드에서는 **`call_async`** 함수가 반환하는 **"퓨처(Future)" 객체**를 변수로 받지 않고 그냥 흘려보내고 있기 때문에 응답을 확인하지 못하고 있습니다.
+
+응답(`string name`)을 사용하려면, **`call_async`가 던져주는 '접수증(Future)'을 받아서, 요리가 다 됐을 때(응답이 왔을 때) 확인하는 과정**을 추가해야 합니다.
+
+ROS 2의 콜백 함수 내부에서 응답을 처리하는 가장 정석적인 방법은 \*\*`add_done_callback`\*\*을 사용하는 것입니다.
+
+### 1\. 응답을 사용하는 방법 (코드 수정)
+
+기존 코드의 `service_callback` 부분을 아래와 같이 수정하면, 거북이가 생성된 후 \*\*turtlesim이 지어준 이름(응답)\*\*을 확인할 수 있습니다.
+
+```python
+    def service_callback(self, request, response):
+        x, y, theta = self.calc_position(request.num, 3)
+
+        for n in range(len(theta)):
+            self.req_spawn.x = float(self.center_x + x[n])
+            self.req_spawn.y = float(self.center_y + y[n])
+            self.req_spawn.theta = float(theta[n])
+            
+            # [수정 1] call_async의 결과(Future 객체)를 변수에 저장합니다.
+            future = self.spawn.call_async(self.req_spawn)
+            
+            # [수정 2] "응답이 도착하면 이 함수를 실행해줘"라고 예약을 겁니다.
+            future.add_done_callback(self.get_spawn_response)
+            
+            time.sleep(0.1)
+
+        response.x = x
+        response.y = y
+        response.theta = theta
+        
+        return response
+
+    # [수정 3] 응답이 왔을 때 실행될 콜백 함수를 추가합니다.
+    def get_spawn_response(self, future):
+        try:
+            # future.result() 안에 실제 응답 데이터가 들어있습니다.
+            result = future.result() 
+            # result.name이 바로 서버가 보내준 거북이의 이름입니다.
+            self.get_logger().info(f'거북이 생성 완료! 이름: {result.name}')
+        except Exception as e:
+            self.get_logger().error(f'요청 실패: {e}')
+```
+
+-----
+
+### 2\. 상세 설명
+
+#### 1\) `future = self.spawn.call_async(...)`
+
+  * `call_async`는 요청을 보내자마자 즉시 **Future(미래)** 객체를 반환합니다.
+  * 이 객체는 \*\*"지금은 답이 없지만, 나중에 서버에서 답이 오면 여기에 담길 거야"\*\*라는 약속 증서와 같습니다.
+
+#### 2\) `future.add_done_callback(...)`
+
+  * 이 증서(Future)에다가 \*\*"답이 도착해서 완료(Done) 상태가 되면, 지정한 함수(`get_spawn_response`)를 자동으로 실행해줘"\*\*라고 붙여두는 것입니다.
+  * 이렇게 하면 메인 프로그램이 멈추지 않고 계속 돌면서, 응답이 올 때마다 알아서 로그를 찍게 됩니다.
+
+#### 3\) `result.name`
+
+  * `future.result()`를 호출하면 `turtlesim/srv/Spawn`의 응답 메시지 전체를 가져옵니다.
+  * 질문하신 대로 응답 메시지 구조가 `string name`이므로, `result.name`으로 접근하면 `turtle2`, `turtle3` 같은 거북이 이름을 꺼낼 수 있습니다.
+
+### 요약
+
+  * **요청(Request):** `self.req_spawn.x`, `y` 등을 채워서 보냄.
+  * **응답(Response):** `call_async`가 주는 **Future** 객체 안에 숨겨져 있음.
+  * **꺼내는 법:** `future.result()`를 통해 꺼내며, 주로 \*\*콜백 함수(`add_done_callback`)\*\*를 연결해서 비동기적으로 확인합니다.
+
+이렇게 수정하고 실행하시면 터미널 창에 `[INFO]: 거북이 생성 완료! 이름: turtle2`와 같은 메시지가 뜨는 것을 볼 수 있습니다.
+
+
+# 3-1 액션 메시지 정의 만들기 (OK)

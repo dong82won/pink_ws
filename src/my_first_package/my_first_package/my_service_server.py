@@ -13,15 +13,14 @@ class MultiSpawning(Node):
     super().__init__('multi_spawn')
     self.server = self.create_service(MultiSpawn, 'multi_spawn', self.service_callback)
 
-    self.teleport = self.create_client(TeleportAbsolute, '/turtle1/teleport_absolute')
+    # self.teleport = self.create_client(TeleportAbsolute, '/turtle1/teleport_absolute')
     self.spawn = self.create_client(Spawn, '/spawn')
 
-    self.req_teleport = TeleportAbsolute.Request()
+    # self.req_teleport = TeleportAbsolute.Request()
     self.req_spawn = Spawn.Request()
 
     self.center_x = 5.54
     self.center_y = 5.54
-
 
   def calc_position(self, n, r):
     gap_theta = 2 * np.pi / n
@@ -32,11 +31,10 @@ class MultiSpawning(Node):
 
 
   def service_callback(self, request, response):
-
-    self.req_teleport.x = self.center_x  # 5.54
-    self.req_teleport.y = self.center_y  # 5.54
-    self.req_teleport.theta = 0.0
-    self.teleport.call_async(self.req_teleport)
+    # self.req_teleport.x = self.center_x  # 5.54
+    # self.req_teleport.y = self.center_y  # 5.54
+    # self.req_teleport.theta = 0.0
+    # self.teleport.call_async(self.req_teleport)
 
     x, y, theta = self.calc_position(request.num, 3)
 
@@ -46,11 +44,11 @@ class MultiSpawning(Node):
       self.req_spawn.theta = float(theta[n])
       self.spawn.call_async(self.req_spawn)
 
+      time.sleep(0.1)
+
     response.x = x
     response.y = y
     response.theta = theta
-
-    time.sleep(0.1)
     return response
 
 
