@@ -30,6 +30,8 @@ setup(
             'turtle_cmd_and_pose_node = my_first_package.turtle_cmd_and_pose:main',
             'my_service_server_node = my_first_package.my_service_server:main',
             'dist_turtle_action_server_node = my_first_package.dist_turtle_action_server:main',
+            'my_multi_thread_node = my_first_package.my_multi_thread:main',
+            'dist_turtle_action_server_node2 = my_first_package.dist_turtle_action_server2:main',
         ],
     },
 )
