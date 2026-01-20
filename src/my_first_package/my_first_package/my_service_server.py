@@ -10,8 +10,8 @@ from turtlesim.srv import Spawn
 
 class MultiSpawning(Node):
   def __init__(self):
-    super().__init__('multi_spawn')
-    self.server = self.create_service(MultiSpawn, 'multi_spawn', self.service_callback)
+    super().__init__('multi_spawn') #노드 이름
+    self.server = self.create_service(MultiSpawn, 'multi_spawn', self.service_callback) #데이터 타입, 서비스 이름, 실행콜백
 
     # self.teleport = self.create_client(TeleportAbsolute, '/turtle1/teleport_absolute')
     self.spawn = self.create_client(Spawn, '/spawn')

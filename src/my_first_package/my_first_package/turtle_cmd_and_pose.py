@@ -7,11 +7,9 @@ from my_first_package_msgs.msg import CmdAndPoseVel
 
 class CmdAndPose(Node):
   def __init__(self):
-    super().__init__('turtlesim_cmd_pose')
-    self.sub_pose = self.create_subscription(
-      Pose, 'turtle1/pose', self.pose_callback, 10)
-    self.sub_cmdvel = self.create_subscription(
-      Twist, 'turtle1/cmd_vel', self.cmdvel_callback, 10)
+    super().__init__('turtlesim_cmd_pose')    
+    self.sub_cmdvel = self.create_subscription(Twist, 'turtle1/cmd_vel', self.cmdvel_callback, 10)
+    self.sub_pose = self.create_subscription(Pose, 'turtle1/pose', self.pose_callback, 10)
 
     self.timer_period = 1.0  # seconds
     self.publisher = self.create_publisher(CmdAndPoseVel, 'cmd_and_pose', 10)

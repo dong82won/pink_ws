@@ -2,10 +2,9 @@ import rclpy as rp
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 
-
 class TurtlesimPublisher(Node):
   def __init__(self):
-    super().__init__('turtle_publisher')
+    super().__init__('turtlesim_publisher')
     self.publisher = self.create_publisher(Twist, 'turtle1/cmd_vel', 10)
     timer_period = 0.5  # seconds
     self.timer = self.create_timer(timer_period, self.timer_callback)
