@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name ="params_file" default="$(find-pkg-share my_opencv_tutorials)/config/cam.yaml"></arg>
+    <node pkg="my_opencv_tutorials" exec="img_pub_param" output="screen">
+        <param from ="$(var params_file)"/>
+    </node>
+
+</launch>

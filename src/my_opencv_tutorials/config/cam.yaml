@@ -1,0 +1,10 @@
+img_pub_node:
+  ros__parameters:
+    width: 320 #1280 #640
+    height: 240
+    fps: 30
+
+img_cartoon_node:
+    ros__parameters:
+        sigma_color: 20
+        sigma_space: 9

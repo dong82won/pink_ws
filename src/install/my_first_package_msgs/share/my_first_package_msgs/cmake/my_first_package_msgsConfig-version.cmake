@@ -1,0 +1,1 @@
+/home/won/pink_ws/src/build/my_first_package_msgs/ament_cmake_core/my_first_package_msgsConfig-version.cmake

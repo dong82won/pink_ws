@@ -1,0 +1,31 @@
+[0.984s] Invoking command in '/home/won/pink_ws/src/build/my_tf_pkg': PYTHONPATH=/home/won/pink_ws/src/build/my_tf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/won/pink_ws/src/install/my_tf_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/won/pink_ws/src/build/my_tf_pkg/build --no-deps symlink_data
+[1.132s] running develop
+[1.222s] running egg_info
+[1.222s] creating my_tf_pkg.egg-info
+[1.222s] writing my_tf_pkg.egg-info/PKG-INFO
+[1.222s] writing dependency_links to my_tf_pkg.egg-info/dependency_links.txt
+[1.222s] writing entry points to my_tf_pkg.egg-info/entry_points.txt
+[1.222s] writing requirements to my_tf_pkg.egg-info/requires.txt
+[1.222s] writing top-level names to my_tf_pkg.egg-info/top_level.txt
+[1.222s] writing manifest file 'my_tf_pkg.egg-info/SOURCES.txt'
+[1.223s] reading manifest file 'my_tf_pkg.egg-info/SOURCES.txt'
+[1.223s] writing manifest file 'my_tf_pkg.egg-info/SOURCES.txt'
+[1.224s] running build_ext
+[1.225s] Creating /home/won/pink_ws/src/install/my_tf_pkg/lib/python3.10/site-packages/my-tf-pkg.egg-link (link to .)
+[1.225s] Installing my_tf_node1 script to /home/won/pink_ws/src/install/my_tf_pkg/lib/my_tf_pkg
+[1.225s] Installing my_tf_node2 script to /home/won/pink_ws/src/install/my_tf_pkg/lib/my_tf_pkg
+[1.225s] Installing tf_child_frame_node script to /home/won/pink_ws/src/install/my_tf_pkg/lib/my_tf_pkg
+[1.225s] Installing tf_combined_frame_node script to /home/won/pink_ws/src/install/my_tf_pkg/lib/my_tf_pkg
+[1.225s] Installing tf_distance_frame_node script to /home/won/pink_ws/src/install/my_tf_pkg/lib/my_tf_pkg
+[1.225s] Installing tf_marker_trail_node script to /home/won/pink_ws/src/install/my_tf_pkg/lib/my_tf_pkg
+[1.225s] Installing tf_marker_trail_path_node script to /home/won/pink_ws/src/install/my_tf_pkg/lib/my_tf_pkg
+[1.225s] Installing tf_marker_trail_path_node2 script to /home/won/pink_ws/src/install/my_tf_pkg/lib/my_tf_pkg
+[1.225s] 
+[1.226s] Installed /home/won/pink_ws/src/build/my_tf_pkg
+[1.226s] running symlink_data
+[1.226s] creating /home/won/pink_ws/src/install/my_tf_pkg/share/ament_index
+[1.226s] creating /home/won/pink_ws/src/install/my_tf_pkg/share/ament_index/resource_index
+[1.226s] creating /home/won/pink_ws/src/install/my_tf_pkg/share/ament_index/resource_index/packages
+[1.226s] symbolically linking /home/won/pink_ws/src/build/my_tf_pkg/resource/my_tf_pkg -> /home/won/pink_ws/src/install/my_tf_pkg/share/ament_index/resource_index/packages
+[1.226s] symbolically linking /home/won/pink_ws/src/build/my_tf_pkg/package.xml -> /home/won/pink_ws/src/install/my_tf_pkg/share/my_tf_pkg
+[1.249s] Invoked command in '/home/won/pink_ws/src/build/my_tf_pkg' returned '0': PYTHONPATH=/home/won/pink_ws/src/build/my_tf_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/won/pink_ws/src/install/my_tf_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/won/pink_ws/src/build/my_tf_pkg/build --no-deps symlink_data

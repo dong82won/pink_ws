@@ -1,0 +1,25 @@
+[1.008s] Invoking command in '/home/won/pink_ws/src/build/big_data_tester_pkg': PYTHONPATH=/home/won/pink_ws/src/build/big_data_tester_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/won/pink_ws/src/install/big_data_tester_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/won/pink_ws/src/build/big_data_tester_pkg/build --no-deps symlink_data
+[1.163s] running develop
+[1.260s] running egg_info
+[1.260s] creating big_data_tester_pkg.egg-info
+[1.260s] writing big_data_tester_pkg.egg-info/PKG-INFO
+[1.260s] writing dependency_links to big_data_tester_pkg.egg-info/dependency_links.txt
+[1.261s] writing entry points to big_data_tester_pkg.egg-info/entry_points.txt
+[1.261s] writing requirements to big_data_tester_pkg.egg-info/requires.txt
+[1.261s] writing top-level names to big_data_tester_pkg.egg-info/top_level.txt
+[1.261s] writing manifest file 'big_data_tester_pkg.egg-info/SOURCES.txt'
+[1.262s] reading manifest file 'big_data_tester_pkg.egg-info/SOURCES.txt'
+[1.262s] writing manifest file 'big_data_tester_pkg.egg-info/SOURCES.txt'
+[1.263s] running build_ext
+[1.263s] Creating /home/won/pink_ws/src/install/big_data_tester_pkg/lib/python3.10/site-packages/big-data-tester-pkg.egg-link (link to .)
+[1.264s] Installing big_data_listener script to /home/won/pink_ws/src/install/big_data_tester_pkg/lib/big_data_tester_pkg
+[1.264s] Installing big_data_talker script to /home/won/pink_ws/src/install/big_data_tester_pkg/lib/big_data_tester_pkg
+[1.265s] 
+[1.265s] Installed /home/won/pink_ws/src/build/big_data_tester_pkg
+[1.265s] running symlink_data
+[1.265s] creating /home/won/pink_ws/src/install/big_data_tester_pkg/share/ament_index
+[1.265s] creating /home/won/pink_ws/src/install/big_data_tester_pkg/share/ament_index/resource_index
+[1.265s] creating /home/won/pink_ws/src/install/big_data_tester_pkg/share/ament_index/resource_index/packages
+[1.265s] symbolically linking /home/won/pink_ws/src/build/big_data_tester_pkg/resource/big_data_tester_pkg -> /home/won/pink_ws/src/install/big_data_tester_pkg/share/ament_index/resource_index/packages
+[1.265s] symbolically linking /home/won/pink_ws/src/build/big_data_tester_pkg/package.xml -> /home/won/pink_ws/src/install/big_data_tester_pkg/share/big_data_tester_pkg
+[1.292s] Invoked command in '/home/won/pink_ws/src/build/big_data_tester_pkg' returned '0': PYTHONPATH=/home/won/pink_ws/src/build/big_data_tester_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/won/pink_ws/src/install/big_data_tester_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/won/pink_ws/src/build/big_data_tester_pkg/build --no-deps symlink_data

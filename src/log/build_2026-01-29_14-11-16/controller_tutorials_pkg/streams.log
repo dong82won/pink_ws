@@ -1,0 +1,24 @@
+[1.132s] Invoking command in '/home/won/pink_ws/src/build/controller_tutorials_pkg': PYTHONPATH=/home/won/pink_ws/src/build/controller_tutorials_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/won/pink_ws/src/install/controller_tutorials_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/won/pink_ws/src/build/controller_tutorials_pkg/build --no-deps symlink_data
+[1.285s] running develop
+[1.370s] running egg_info
+[1.370s] creating controller_tutorials_pkg.egg-info
+[1.370s] writing controller_tutorials_pkg.egg-info/PKG-INFO
+[1.371s] writing dependency_links to controller_tutorials_pkg.egg-info/dependency_links.txt
+[1.371s] writing entry points to controller_tutorials_pkg.egg-info/entry_points.txt
+[1.371s] writing requirements to controller_tutorials_pkg.egg-info/requires.txt
+[1.371s] writing top-level names to controller_tutorials_pkg.egg-info/top_level.txt
+[1.371s] writing manifest file 'controller_tutorials_pkg.egg-info/SOURCES.txt'
+[1.372s] reading manifest file 'controller_tutorials_pkg.egg-info/SOURCES.txt'
+[1.372s] writing manifest file 'controller_tutorials_pkg.egg-info/SOURCES.txt'
+[1.373s] running build_ext
+[1.373s] Creating /home/won/pink_ws/src/install/controller_tutorials_pkg/lib/python3.10/site-packages/controller-tutorials-pkg.egg-link (link to .)
+[1.373s] Installing simple_rotate script to /home/won/pink_ws/src/install/controller_tutorials_pkg/lib/controller_tutorials_pkg
+[1.374s] 
+[1.374s] Installed /home/won/pink_ws/src/build/controller_tutorials_pkg
+[1.374s] running symlink_data
+[1.374s] creating /home/won/pink_ws/src/install/controller_tutorials_pkg/share/ament_index
+[1.374s] creating /home/won/pink_ws/src/install/controller_tutorials_pkg/share/ament_index/resource_index
+[1.374s] creating /home/won/pink_ws/src/install/controller_tutorials_pkg/share/ament_index/resource_index/packages
+[1.374s] symbolically linking /home/won/pink_ws/src/build/controller_tutorials_pkg/resource/controller_tutorials_pkg -> /home/won/pink_ws/src/install/controller_tutorials_pkg/share/ament_index/resource_index/packages
+[1.374s] symbolically linking /home/won/pink_ws/src/build/controller_tutorials_pkg/package.xml -> /home/won/pink_ws/src/install/controller_tutorials_pkg/share/controller_tutorials_pkg
+[1.397s] Invoked command in '/home/won/pink_ws/src/build/controller_tutorials_pkg' returned '0': PYTHONPATH=/home/won/pink_ws/src/build/controller_tutorials_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/won/pink_ws/src/install/controller_tutorials_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/won/pink_ws/src/build/controller_tutorials_pkg/build --no-deps symlink_data

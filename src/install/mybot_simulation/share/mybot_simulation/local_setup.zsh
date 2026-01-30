@@ -1,0 +1,1 @@
+/home/won/pink_ws/src/build/mybot_simulation/ament_cmake_environment_hooks/local_setup.zsh
