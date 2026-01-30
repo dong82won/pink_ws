@@ -25,6 +25,25 @@ setup(
     entry_points={
         'console_scripts': [
         'simple_rotate = controller_tutorials_pkg.simple_rotate:main',
+
+        'control_rotate = controller_tutorials_pkg.control_rotate:main',
+
+        'pose_dual_controller = controller_tutorials_pkg.pose_dual_controller:main',
+        'qmonitor_for_pose_dual_controller = controller_tutorials_pkg.qmonitor_for_pose_dual_controller:main',
+
+        'move_turtle = controller_tutorials_pkg.move_turtle:main',
+        'monitor_for_move_turtle = controller_tutorials_pkg.monitor_for_move_turtle:main',
+
+        'move_turtle_state_machine = controller_tutorials_pkg.move_turtle_state_machine:main',
+
+        'qmonitor_state_machine = controller_tutorials_pkg.qmonitor_state_machine:main',
+
+
+        'monitor_for_pose_dual_controller = controller_tutorials_pkg.p_monitor_for_pose_dual_controller:main',
+        'move_turtle_behavior_tree = controller_tutorials_pkg.p_move_turtle_behavior_tree:main',
+        'web_publisher_node = controller_tutorials_pkg.p_web_publisher_node:main',
+
+
         ],
     },
 )
