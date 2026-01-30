@@ -1,1 +1,0 @@
-/home/won/pink_ws/src/build/my_first_package/launch/turtlesim_and_teleop.launch.py

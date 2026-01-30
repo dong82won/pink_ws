@@ -1,1 +1,0 @@
-/home/won/pink_ws/src/build/my_first_package_msgs/rosidl_typesupport_fastrtps_c/my_first_package_msgs/action/detail/dist_turtle__rosidl_typesupport_fastrtps_c.h

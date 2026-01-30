@@ -1,1 +1,0 @@
-/home/won/pink_ws/src/build/my_first_package_msgs/rosidl_typesupport_introspection_cpp/my_first_package_msgs/srv/detail/multi_spawn__rosidl_typesupport_introspection_cpp.hpp

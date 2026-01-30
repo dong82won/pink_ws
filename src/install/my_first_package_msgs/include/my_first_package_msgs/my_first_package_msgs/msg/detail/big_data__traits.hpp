@@ -1,1 +1,0 @@
-/home/won/pink_ws/src/build/my_first_package_msgs/rosidl_generator_cpp/my_first_package_msgs/msg/detail/big_data__traits.hpp

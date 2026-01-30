@@ -1,1 +1,0 @@
-/home/won/pink_ws/src/build/mybot_simulation/ament_cmake_core/mybot_simulationConfig.cmake

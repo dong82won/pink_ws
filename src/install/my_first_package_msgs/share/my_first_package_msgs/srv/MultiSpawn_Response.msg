@@ -1,1 +1,0 @@
-/home/won/pink_ws/src/build/my_first_package_msgs/rosidl_cmake/srv/MultiSpawn_Response.msg
